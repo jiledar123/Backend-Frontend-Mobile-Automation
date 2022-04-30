@@ -1,5 +1,5 @@
 @BackendTask @Regression
-Feature:  Back-end tests for the website https://coinmarketcap.com/
+Feature:  Verify the back-end tests for the website https://coinmarketcap.com/
 
   @BackendTask1
   Scenario Outline: TC_01A User Retrieves the ID of bitcoin (BTC), usd tether (USDT), and Ethereum (ETH)

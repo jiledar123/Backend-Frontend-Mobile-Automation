@@ -16,10 +16,10 @@ import java.util.concurrent.TimeUnit;
  */
 public class WebDriverFactory {
 
-	private static final Integer IMPLICITLY_WAIT_TIME = 10;
-	private static final Integer SCRIPT_LOAD_TIME = 15;
-	private static final Integer PAGE_LOAD_TIME = 60;
-	private static final Integer DEFAULT_WEBDRIVER_WAIT_TIME = 30;
+	private static final int IMPLICITLY_WAIT_TIME = 10;
+	private static final int SCRIPT_LOAD_TIME = 15;
+	private static final int PAGE_LOAD_TIME = 60;
+	private static final int DEFAULT_WEBDRIVER_WAIT_TIME = 30;
 
 	private static ThreadLocal<WebDriver> webDrivers = new ThreadLocal<>();
 
@@ -74,7 +74,7 @@ public class WebDriverFactory {
 	 * @return {@link WebDriverWait}
 	 */
 	public static WebDriverWait getWebDriverWait() {
-		return getWebDriverWait(2);
+		return getWebDriverWait(0);
 	}
 
 	/**
@@ -85,7 +85,7 @@ public class WebDriverFactory {
 	 */
 	public static WebDriverWait getWebDriverWait(final int seconds) {
 		final int wait = seconds > 0 ? seconds : DEFAULT_WEBDRIVER_WAIT_TIME;
-		return new WebDriverWait(webDrivers.get(), wait, 50);
+		return new WebDriverWait(webDrivers.get(),      wait, 50);
 	}
 
 	private static void setupBrowser(final WebDriver webDriver) {

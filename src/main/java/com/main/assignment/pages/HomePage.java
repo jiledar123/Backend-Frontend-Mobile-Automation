@@ -2,8 +2,6 @@ package com.main.assignment.pages;
 
 import com.main.assignment.utils.ConfigProvider;
 import com.main.assignment.utils.WebDriverFactory;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -38,8 +36,6 @@ public class HomePage extends BasePageObject {
             e.printStackTrace();
         }
     }
-
-    private static Logger log = LogManager.getLogger(HomePage.class);
 
     /**
      * Navigate to home page.
