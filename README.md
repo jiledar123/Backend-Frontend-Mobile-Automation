@@ -44,4 +44,4 @@
              2. Refer <code>src/test/java/com/test/assignment/Runner.java</code>
                 <code>e.g. 	tags = {"@MobileTask"}, </code>
              3. Run =>  mvn test
-#####<i>Note : Successful test execution results can be found on Project/SuccessfulExecutionEvidence </i>
+* #####<i>Note : Successful test execution results can be found on Project/SuccessfulExecutionEvidence </i>
