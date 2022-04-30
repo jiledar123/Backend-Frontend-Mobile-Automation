@@ -44,7 +44,11 @@ public abstract class BasePageObject {
         return elements;
     }
 
-
+    protected WebElement getElement(By locator) {
+        waitForPageToLoad(locator);
+        final WebElement element = WebDriverFactory.getWebDriverWait().until(ExpectedConditions.visibilityOfElementLocated(locator));
+        return element;
+    }
     protected void waitForPageToLoad(By by) {
         WebDriverFactory.getWebDriverWait().until(ExpectedConditions.presenceOfElementLocated(by));
     }

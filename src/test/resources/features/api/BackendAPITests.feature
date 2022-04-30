@@ -1,4 +1,4 @@
-@BackendTask
+@BackendTask @Regression
 Feature:  Back-end tests for the website https://coinmarketcap.com/
 
   @BackendTask1

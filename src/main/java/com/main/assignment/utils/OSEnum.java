@@ -4,8 +4,20 @@ package com.main.assignment.utils;
  * Enumeration class for indication of the current operating system.
  */
 public enum OSEnum {
-	MACOS, WINDOWS;
+	/**
+	 * Macos os enum.
+	 */
+	MACOS,
+	/**
+	 * Windows os enum.
+	 */
+	WINDOWS;
 
+	/**
+	 * Gets os.
+	 *
+	 * @return the os
+	 */
 	public static OSEnum getOS() {
 		final String name = System.getProperty("os.name");
 		if (name.contains("Mac")) {

@@ -7,7 +7,7 @@ import io.cucumber.testng.CucumberOptions;
 		plugin = {"html:target/cukes", "json:target/cucumber-report.json", "junit:target/cucumber-report.xml", "pretty",
 		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 		strict = true,
-		tags = {"@BackendTask"},
+		tags = {"@Regression"},
 		monochrome = true)
 public class Runner extends AbstractTestNGCucumberTests {
 }

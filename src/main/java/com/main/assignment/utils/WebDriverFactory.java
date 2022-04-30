@@ -50,7 +50,7 @@ public class WebDriverFactory {
 	/**
 	 * Retrieves an instance of {@link WebDriver} for current thread. May return {@code null} in case the
 	 * {@link WebDriverFactory#initialize()} method is not called before for the current thread.
-	 * 
+	 *
 	 * @return WebDriver instance {@link WebDriver}
 	 */
 	public static WebDriver getDriver() {
@@ -70,18 +70,17 @@ public class WebDriverFactory {
 
 	/**
 	 * Gets default {@link WebDriverWait} instance with default wait of 10 seconds and 50 milliseconds retry interval.
-	 * 
+	 *
 	 * @return {@link WebDriverWait}
 	 */
 	public static WebDriverWait getWebDriverWait() {
-		return getWebDriverWait(0);
+		return getWebDriverWait(2);
 	}
 
 	/**
 	 * Gets customized {@link WebDriverWait} instance. The default retry interval is 50 milliseconds
-	 * 
-	 * @param seconds
-	 *            wait time in seconds
+	 *
+	 * @param seconds wait time in seconds
 	 * @return {@link WebDriverWait}
 	 */
 	public static WebDriverWait getWebDriverWait(final int seconds) {

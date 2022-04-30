@@ -12,30 +12,9 @@ import org.openqa.selenium.TakesScreenshot;
  */
 public class BaseSteps {
     public static Scenario scenario;
-
-    @Before(order = 0)
-    public void beforeUITests() {
-        if(System.getProperty("module").equalsIgnoreCase("frontend")) {
-            WebDriverFactory.initialize();
-        }else if(System.getProperty("module").equalsIgnoreCase("backend")) {
-//            WebDriverFactory.initialize();
-        }else if(System.getProperty("module").equalsIgnoreCase("mobile")) {
-//            WebDriverFactory.initialize();
-        }
-    }
-
-    @Before(order = 1)
+    @Before
     public void getScenario(Scenario scenario) {
         BaseSteps.scenario = scenario;
-    }
-
-    @AfterStep
-    public void addScreenshotOnFailure(final Scenario scenario) {
-        if (scenario.isFailed()) {
-            TakesScreenshot ts = (TakesScreenshot) WebDriverFactory.getDriver();
-            byte[] src = ts.getScreenshotAs(OutputType.BYTES);
-            scenario.embed(src, "image/png", "FailShot");
-        }
     }
 
     @After
